@@ -16,7 +16,7 @@ export default function SignUp() {
   return (
     <>
       <div className="container p-5">
-        <h1 className="text-center">로고123릴라</h1>
+        <h1 className="text-center">로고123릴1232라</h1>
       </div>
       <div className="container">
         <form className="col-6 m-auto form-min-w">
