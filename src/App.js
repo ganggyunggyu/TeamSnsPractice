@@ -43,7 +43,7 @@ function App() {
         console.log(res);
       })
       .catch((err) => {
-        console.log("요청실패");
+        console.log("요청실패!!!!!!!");
         console.log(err);
         console.log(title, content);
       });
