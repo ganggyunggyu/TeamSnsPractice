@@ -37,7 +37,7 @@ function App() {
         title: title,
         content: content,
         memberId: 0,
-        displayName: "또띠",
+        displayName: "또1띠",
       })
       .then((res) => {
         console.log(res);
