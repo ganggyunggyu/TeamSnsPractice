@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-export default function Login() {
+export default function Login({ setIsLogined, setUserInfo }) {
   const [email, setEmail] = useState("");
   const [password, setPassWord] = useState("");
 
-  const inputChange = (e, value, setValue) => {
+  const inputChange = (e, setValue) => {
     console.log(e.target.value);
     setValue(e.target.value);
   };
@@ -14,7 +14,7 @@ export default function Login() {
     const user = { email, password };
     console.log(user);
     axios
-      .post("http://localhost:4000/user", user)
+      .get("http://localhost:4000/user")
       .then((res) => console.log(res))
       .catch((err) => {
         console.log("err : ", err);
@@ -40,7 +40,7 @@ export default function Login() {
                 aria-describedby="emailHelp"
                 value={email}
                 onChange={(e) => {
-                  inputChange(e, email, setEmail);
+                  inputChange(e, setEmail);
                 }}
               ></input>
             </div>

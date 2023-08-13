@@ -14,7 +14,10 @@ import axios from "axios";
 
 function App() {
   const [items, setItems] = useState([]);
+  const [isLogined, setIsLogined] = useState(false);
+  const [userInfo, setUserInfo] = useState({});
   const navigator = useNavigate();
+
   const fecthItems = async () => {
     await axios
       .get("http://localhost:4000/item")
@@ -89,7 +92,10 @@ function App() {
           path="/Login"
           element={
             <>
-              <Login></Login>
+              <Login
+                setIsLogined={setIsLogined}
+                setUserInfo={setUserInfo}
+              ></Login>
             </>
           }
         ></Route>
